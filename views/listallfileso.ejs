@@ -1,0 +1,24 @@
+<html>
+<body>
+    <center>
+        <img src="../Cognimeet_Assets/Login/Group 2302.png" width="500px" />
+        <h1>Available Scenes</h1>
+        <h4 width="100%" >----------------------------------------------</h4>
+        <div>
+            <% items.forEach(function(image) { %>
+            <div>
+                <div>
+                    <img src="data:image/<%=image.img.contentType%>;base64,
+                        <%=image.img.data.toString('base64')%>" width="50%" height="50%">
+                    <div>
+                        <h5><%= image.name %></h5>
+                        <h4 width="100%" >----------------------------------------------</h4>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </center>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <title>CogniMeet</title>
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <link rel="apple-touch-icon" href="images/favicon.png" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <!-- Meta Information -->
+  
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body style="background-image: url('Cognimeet_Assets/Enter/Group 2305.png');">      
+            <div class="roomContainer">
+                <header><img src="Cognimeet_Assets/Enter/Group-2303.png" width="600px" /></header>
+                <div>
+                    <input class="roomID" type="text" id="roomName" value="Enter Your room name!!" />
+                    <button class="joinButton"
+                    onclick="{window.location.href = '/join/' + document.getElementById('roomName').value}"
+                    >Join to Room</button>
+                </div>
+            </div>
+        <script defer src="js/newroom.js"></script>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+docker container ls
+npx kill-port 3000 or docker rm -f <container_name/s>

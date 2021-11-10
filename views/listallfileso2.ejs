@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select a scene</title>
+        <!-- link rel="stylesheet" href="/css/client.css" / -->
+    </head>
+    <body style="background: #3cff00">
+        <center>
+        <img src="../Cognimeet_Assets/Login/Group 2302.png" width="500px" />
+        <h1>Available Scenes</h1>
+        <h4 width="100%"> ---------------------------------------------- </h4>
+        <div>
+            <% items.forEach(function(image) { %>
+            <div>
+                <div>
+                    <img class="dbscenes" src="data:image/<%=image.img.contentType%>;base64,
+                        <%=image.img.data.toString('base64')%>" width="50%" height="50%" alt="<%= image.name %>"> <!-- onclick="setbgfromimg(this.src)" -->
+                    <div>
+                        <!-- h5><%= image.name %></h5 -->
+                        <!-- h4 width="100%" > ---------------------------------------------- </h4 -->
+                        <h5><%= image.name %></h5>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <h1> select a scene from below options</h1>
+        <button id="setBgImgBtn">
+            <img src="../Cognimeet_Assets/Livemeeting/setbg-crop.png" width="36" height="42"/>
+        </button>
+        </center>
+        <script>
+            let setBgImgBtn;
+            let isImgDivOpen = false;
+            let imgOptions = document.querySelectorAll('h5'); //all names of the images present in upload folder
+            function getHtmlElementsById() {
+                setBgImgBtn = document.getElementById("setBgImgBtn");
+            }
+
+            let all_images = document.querySelectorAll('.dbscenes');
+            
+            getHtmlElementsById()
+
+            function setMyBgImgBtn() {
+            setBgImgBtn.addEventListener('click', (e) => {
+                for (let i = 0; i < imgOptions.length; i++) {
+                    imgOptions[i].addEventListener('click', (e) => {
+                        console.log(i)
+                        console.log(imgOptions[i])
+                        var text = imgOptions[i].textContent;
+                        let selectedImg = text;
+                        document.body.style.backgroundImage = `url('../uploads/${selectedImg}')`;
+                        document.body.style.backgroundSize = "cover"
+                        isImgDivOpen = false;
+                    });
+                }
+                isImgDivOpen = !isImgDivOpen;
+                });
+            }
+
+            setMyBgImgBtn()
+
+            
+
+            /*
+            function setbgfromimg(dataofimg){
+                document.body.style.backgroundImage = url(""+dataofimg);
+                document.body.style.backgroundSize = "cover"
+            }
+            */
+
+        </script>
+    </body>
+</html>

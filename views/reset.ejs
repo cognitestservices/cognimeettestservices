@@ -1,0 +1,98 @@
+<head>
+	<!-- link rel="stylesheet" href="css/style.css" -->
+    <style>
+    body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    }
+    .container{
+    position: relative;
+    width: 500px;
+    background: white;
+    padding: 30px 40px;
+    background:transparent;
+    background-image: linear-gradient(to top,rgba(255, 255, 255, 0), white);
+    /* opacity: 0.5; */
+    border-bottom-left-radius:5%;
+    border-bottom-right-radius:5%;
+    border-top-left-radius:5%;
+    border-top-right-radius:5%;
+    margin-top: 50px;
+    }
+
+    header{
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    }
+
+    .input-field{
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    }
+
+    .input-field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    padding-left: 50px;
+    outline: none;
+    font-size: 19px;
+    transition: .4s;
+    border-radius: 30px;
+    }
+
+    input:focus{
+    border: 1px solid rgb(145, 142, 142);
+    }
+
+    form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    }
+
+    .button button{
+    border-style: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: palevioletred;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    }
+    </style>
+</head>
+
+<body style="background-image: url('../Cognimeet_Assets/Login/MacBookPro-15.png');">
+<div class="container">
+    <header><img src="../Cognimeet_Assets/Login/Group 2302.png" width="500px" /></header>
+   <form  method="POST">
+    <div class="input-field">
+    <input  type="text" name="confirm" placeholder="New password">
+    </div>
+
+    <div class="input-field">
+        <input  type="text" name="email" placeholder="Confirm new password">
+    </div>
+
+    <div class="button">
+        <button type="submit">Update Password</button>
+        </div>
+    </form>
+
+</div>
+</body>

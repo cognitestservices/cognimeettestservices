@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select a scene</title>
+        <!-- link rel="stylesheet" href="/css/client.css" / -->
+        <!-- style>
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        </style -->
+    </head>
+    <body style="background: #000000" onload="makeimageclickable()">
+        <center>
+        <img src="../Cognimeet_Assets/Login/Group 2302.png" width="500px" />
+        <h1 style="color:rgb(255, 255, 255);">Available Scenes</h1>
+        <h4 style="color:rgb(255, 255, 255);"> ---------------------------------------------- </h4>
+        <div>
+            <% items.forEach(function(image) { %>
+            <div>
+                <div>
+                    <img id="dbscenes" class="dbscenes" src="data:image/<%=image.img.contentType%>;base64,
+                        <%=image.img.data.toString('base64')%>" width="25%" height="25%" alt="<%= image.name %>"> <!-- onclick="setbgfromimg(this.src)" -->
+                    <div>
+                        <h5 style="color:rgb(255, 255, 255);"><%= image.name %></h5>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        </center>
+        <script>
+            let isImgDivOpen = false;
+            let all_images = document.querySelectorAll('.dbscenes');
+            //localStorage.clear();
+            //if no item/scene selected the default image will be:
+            localStorage.setItem('defaultbgname', '../uploads/bg3.jpg');
+            function makeimageclickable() {
+                //if no item/scene selected the default image will be:
+                localStorage.setItem('defaultbgname', '../uploads/bg3.jpg');
+                for (let i = 0; i < all_images.length; i++) {                 
+                    all_images[i].addEventListener('click', (e) => {
+                    //console.log(all_images[i])
+                    var text = all_images[i].alt;
+                    var imgdatabs64 = all_images[i].src;
+                    let selectedImg = text;
+                    //console.log(selectedImg)
+                    //localStorage.setItem('defaultbg', imgdatabs64);
+                    localStorage.setItem('defaultbgname', '../uploads/'+selectedImg);
+                    //console.log(localStorage.getItem('defaultbg'));
+                    document.body.style.backgroundImage = `url('../uploads/${selectedImg}')`;
+                    document.body.style.backgroundSize = "cover";
+                    isImgDivOpen = false;
+                    window.location.href = '/newcall';
+                    });
+                }
+                isImgDivOpen = !isImgDivOpen;
+            }
+        </script>
+    </body>
+</html>
+
+<!-- This file displays all the files present in the database and also make them clickable which currently changes the background image of the body.-->

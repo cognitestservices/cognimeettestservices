@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.container{
+  position: relative;
+  width: 500px;
+  background: white;
+  padding: 30px 40px;
+  background:transparent;
+  background-image: linear-gradient(to top,rgba(255, 255, 255, 0), white);
+  /* opacity: 0.5; */
+  border-bottom-left-radius:5%;
+  border-bottom-right-radius:5%;
+  border-top-left-radius:5%;
+  border-top-right-radius:5%;
+  margin-top: 50px;
+}
+header{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+.input-field{
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field .emailpic{
+    background-image: url("../Cognimeet_Assets/Login/email1.png");
+    background-position: left center;
+    background-position-x: 15px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.input-field .passwordpic{
+    background-image: url("../Cognimeet_Assets/Login/padlock-1.png");
+    background-position: left center;
+    background-position-x: 15px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.input-field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  padding-left: 50px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+input:focus{
+  border: 1px solid rgb(145, 142, 142);
+}
+.input-field span.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+span.show{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+  visibility: visible;
+}
+form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+.button button{
+  border-style: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: palevioletred;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+.container .auth{
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: grey;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+}
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span{
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.login-heading{
+    padding-top: 0px;
+    padding-bottom: 40px;
+    color: rgb(34, 33, 33);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+.forgotpassword{
+    color: rgb(97, 95, 95);
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+}
+.enterLogo{
+    padding-bottom: 600px;
+}
+.roomContainer{
+  position: relative;
+  width: 500px;
+  background: white;
+  padding-bottom: 300px;
+  background:transparent;
+}
+
+.roomID{
+  margin-top: 50px;
+    height: 60px;
+    width: 85%;
+    text-align: center;
+    border: 1px solid white;
+    outline: none;
+    font-size: 22px;
+    border-radius: 30px;
+}
+
+form .joinButton{
+  margin-top: 25px;
+  position: relative;
+  height: 60px;
+  width: 85%;
+  border-style: none;
+  color: white;
+  border-radius: 30px;
+  background: rgb(216, 112, 147);
+  outline: none;
+  font-size: 22px;
+  font-family:'Open Sans', sans-serif;
+}
+
+div .joinButton{
+  margin-top: 25px;
+  position: relative;
+  height: 60px;
+  width: 85%;
+  border-style: none;
+  color: white;
+  border-radius: 30px;
+  background: rgb(216, 112, 147);
+  outline: none;
+  font-size: 22px;
+  font-family:'Open Sans', sans-serif;
+}
+
+.loading-heading{
+  width: 500px;
+  height: 600px;
+  padding: 30px 40px;
+  background:transparent;
+  background-image: linear-gradient(to top,rgba(129, 128, 128, 0), rgb(129, 127, 127));
+  border-bottom-left-radius:5%;
+  border-bottom-right-radius:5%;
+  border-top-left-radius:5%;
+  border-top-right-radius:5%;
+  margin-bottom: 200px;
+}
+
+.textload{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-family:'Open Sans', sans-serif;
+}
+
+.loadingText{
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-family:'Open Sans', sans-serif
+}
+
+.ingreen{
+  color: #41d1b1;
+}
+
+.background-join{
+  background-image: linear-gradient(to right,#5d5f66  , #30323b);
+}
+.joinlogo{
+  width: 530px;
+}
+
+.linelogo{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.miclogo {
+  padding-top: 30px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cameralogo{
+  padding-top: 35px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.input-field .personpic{
+  background-image: url("Cognimeet_Assets/Join/Group 8.png");
+  background-position: left center;
+  background-position-x: 18px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  font-size: 21px;
+}
+
+.formfield{
+  padding-top: 50px;
+}
+
+.textshare{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family:'Open Sans', sans-serif;
+}
+.sharetext{
+  color: white;
+  padding-top:20px;
+  padding-bottom: 0px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 15px;
+}
+.sharelink{
+  padding-bottom: 0px;
+  color:#41d1b1;
+  font-size: 15px;
+  font-weight: bold;
+}
+.copyLinkButton, .emailInviteButton, .closeButton{
+  overflow: hidden;
+  height: 40px;
+  width: 200px;
+  margin-top: 25px;
+  position: relative;
+  border-style: none;
+  color: white;
+  border-radius: 30px;
+  background: #41d1b1;
+  outline: none;
+  font-size: 17px;
+  font-family:'Open Sans', sans-serif;
+}
+.emailInviteButton{
+  background: #7464f3;
+}
+.closeButton{
+  background: #ea5455;
+}
+.rotation {
+  display: inline-block;
+  background-color:none;
+  font-size: 1px;
+  padding: 1px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  animation: roll 2s infinite;
+  transform: rotate(30deg);
+  opacity: .7;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
